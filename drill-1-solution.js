@@ -111,6 +111,7 @@ function detailsAtThree(personList){
     }
 
     console.log(`My name is ${personList[3]['name']} and I live in ${personList[3]['city']}`);
+    return;
 
 }
 
@@ -133,12 +134,15 @@ function printAges(personList){
         return;
     }
 
+    let ages = [];
     for(let i=0;i<personList.length;i++){
-        console.log(`My age is ${personList[i].age}`);
+        ages.push(personList[i].age);
     }
+    console.log(ages);
+    return;
 }
 
-//    Create a function to retrieve and display the first hobby of each individual in the dataset.//    Create a function to retrieve and display the first hobby of each individual in the dataset.
+//    Create a function to retrieve and display the first hobby of each individual in the dataset.
 
 function firstHobby(personList){
 
@@ -157,9 +161,12 @@ function firstHobby(personList){
         return;
     }
 
+    let hobby = [];
     for(let i=0; i<personList.length;i++){
-        console.log(`My hobby is ${personList[i]['hobbies'][0]}.`);
+        hobby.push(personList[i]['hobbies'][0]);
     }
+    console.log(hobby);
+    return;
 }
 
 //    Write a function that accesses and prints the names and email addresses of individuals aged 25.
@@ -206,7 +213,7 @@ function printCountryAndCity(personList){
     }
 
     for(let i=0;i<personList.length;i++){
-        console.log(`I am from ${personList[i].country} and I live in ${personList[i].city}.`);
+        console.log(personList[i].country +" "+ personList[i].city);
     }
 }
 
